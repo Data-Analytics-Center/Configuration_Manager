@@ -1,14 +1,10 @@
 site_name: Configuration Manager
-site_url: https://devdac.utsarr.net/docs/database-manager
+site_url: https://devdac.utsarr.net/docs/configuration-manager
 
 nav:
   - Home: index.md
-  - API:
-    - Description: API_Subpages/description.md
-    - Engine Factory: API_Subpages/engine.md
-    - Examples & Best Practices: API_Subpages/examples.md
-  - SQLAlchemyCore: SQLAlchemyCore.md
-  - Project Development: project_development.md
+  - API: api.md
+  - Examples: examples.md
 
 theme:
   name: material
@@ -37,8 +33,8 @@ theme:
       primary: teal
       accent: lime
   icon:
-    annotation: material/arrow-right-circle
-
+    annotation: material/plus-circle
+    
 plugins:
   - search
   - mkdocstrings
@@ -46,6 +42,8 @@ plugins:
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - admonition

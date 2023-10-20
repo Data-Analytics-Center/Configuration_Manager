@@ -21,17 +21,22 @@ class Singleton(abc.ABCMeta, type):
 class Config(metaclass=Singleton):
     """Configuration class to store the state of enviroment variables for different scripts access."""
 
-    def __init__(self, environment_keys: set[str]):
+    def __init__(self, environment_keys: list[str]):
         """Create a new Config instance and sets the environment variables as attributes dynamically.
 
         Arguments:
-            environment_keys (Set[str]): The environment variables keys used to read environment variables from the environment into the configuration class.
+            environment_keys (list[str]): The environment variables keys used to read environment variables from the environment into the configuration class.
         """
         load_dotenv()
 
         self._set_dynamic_attributes(environment_keys=environment_keys)
 
-    def _set_dynamic_attributes(self, environment_keys: set[str]):
+    def _set_dynamic_attributes(self, environment_keys: list[str]):
+        """Dynamically set the environment variables as attributes of the Config class.
+
+        Arguments:
+            environment_keys (list[str]): The environment variables keys used to read environment variables from the environment into the configuration class.
+        """
         for environment_key in environment_keys:
             value = os.getenv(environment_key)
 

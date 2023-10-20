@@ -1,6 +1,4 @@
-# Database Manager 
-
-Welcome to the Database Manager Documentation!
+## Welcome to the Configuration Manager Documentation!
 
 ## Installation
 
