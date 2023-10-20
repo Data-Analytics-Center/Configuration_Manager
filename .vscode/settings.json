@@ -1,0 +1,28 @@
+{
+    "python.testing.pytestArgs": [
+        "src/configuration_manager/tests"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    "isort.args": [
+        "--profile",
+        "black"
+    ],
+    "python.defaultInterpreterPath": "menv\\Scripts\\python.exe",
+    "autoDocstring.quoteStyle": "\"\"\"",
+    "autoDocstring.docstringFormat": "pep257",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports.rome": true
+    },
+    "ruff.interpreter": [
+        "menv\\Scripts\\python.exe"
+    ],
+}
