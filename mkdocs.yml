@@ -1,0 +1,59 @@
+site_name: Configuration Manager
+site_url: https://devdac.utsarr.net/docs/database-manager
+
+nav:
+  - Home: index.md
+  - API:
+    - Description: API_Subpages/description.md
+    - Engine Factory: API_Subpages/engine.md
+    - Examples & Best Practices: API_Subpages/examples.md
+  - SQLAlchemyCore: SQLAlchemyCore.md
+  - Project Development: project_development.md
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  language: en
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline 
+        name: Switch to dark mode
+      primary: indigo
+      accent: purple 
+    - scheme: slate 
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode    
+      primary: teal
+      accent: lime
+  icon:
+    annotation: material/arrow-right-circle
+
+plugins:
+  - search
+  - mkdocstrings
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - md_in_html
