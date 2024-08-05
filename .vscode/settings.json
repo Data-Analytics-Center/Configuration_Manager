@@ -4,25 +4,12 @@
     ],
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true,
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter",
-        "editor.formatOnSave": true,
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": true
-        }
-    },
-    "isort.args": [
-        "--profile",
-        "black"
-    ],
-    "python.defaultInterpreterPath": "menv\\Scripts\\python.exe",
-    "autoDocstring.quoteStyle": "\"\"\"",
-    "autoDocstring.docstringFormat": "pep257",
     "editor.formatOnSave": true,
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.codeActionsOnSave": {
-        "source.organizeImports.rome": true
-    },
-    "ruff.interpreter": [
-        "menv\\Scripts\\python.exe"
-    ],
+      "source.organizeImports": "always"
+    }
+  },
+    "python.defaultInterpreterPath": "menv\\Scripts\\python.exe"
 }
